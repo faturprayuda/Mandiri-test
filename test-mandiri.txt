@@ -1,0 +1,67 @@
+1.public class MyClass {
+    
+    static void prime(int number){
+        int counter = 2;
+        for(int j = 0; j < (number/2)+1; j++){
+            if(number % counter == 1){
+                System.out.println(number);
+                counter++;
+            } else {
+                //System.out.println(number);
+            }
+        }
+        
+    }
+    
+    public static void main(String args[]) {
+        for(int i = 1; i <= 20; i++){
+            prime(i);
+        }
+        // prime(4);
+    }
+}
+
+
+2.public class MyClass {
+    
+    
+    
+    public static void main(String args[]) {
+        int[] line1 = {3,5,7};
+        int[] line2 = {8,2,1};
+        int[] line3 = {6,9,2};
+        int cross1 = 0;
+        int cross2 = 0;
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(i == 0){
+                    System.out.print(line1[j]);
+                    if(j==0){
+                        cross1+=line1[j];
+                    } else if(j==2){
+                        cross2+=line1[j];
+                    }
+                } else if(i==1){
+                    System.out.print(line2[j]);
+                    if(j==1){
+                        cross1+=line2[j];
+                        cross2+=line2[j];
+                    }
+                } else {
+                    System.out.print(line3[j]);
+                    if(j==0){
+                        cross2+=line3[j];
+                    } else if(j==2){
+                        cross1+=line3[j];
+                    }
+                }
+            }
+            System.out.println("\n");
+        }
+        System.out.println(cross1 + "+"+cross2+"="+Math.abs(cross1-cross2));
+        
+        
+    }
+}
+
+3.
